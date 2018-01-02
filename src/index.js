@@ -6,7 +6,7 @@ import Trivia from './Trivia';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();
 
 ReactDOM.render(<Trivia />, document.getElementById('trivia'));
 registerServiceWorker();
