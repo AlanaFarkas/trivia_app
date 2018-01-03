@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+import $ from 'jquery'; 
 import './Trivia.css';
+
+	$(document).ready(function() {
+	    console.log( "DID IT!" );
+		}); //ready
 
 class Trivia extends Component {
 
@@ -15,13 +20,13 @@ class Trivia extends Component {
 	}; //constructor
 
 	newTrivia(e) {
-		// let trivia = "Alana";
-	}
+
+	}; //newTrivia
 		  
 	render() {
 		return (
 		<div className="button-container">
-		    <button>Hit Me</button>
+		    <button onSubmit={ this.newTrivia }>Hit Me</button>
 		</div>
 		);
 	}; //render
@@ -31,4 +36,8 @@ class Trivia extends Component {
 
 export default Trivia;
 
-'https://opentdb.com/api.php?amount=1&category=9&difficulty=medium'
+// "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium"
+
+
+
+
