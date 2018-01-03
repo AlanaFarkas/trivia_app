@@ -4,21 +4,19 @@ import './Trivia.css';
 
 // *************
 
-$(document).ready(function() {
+$(function() {
 
-    $.ajax({
-			url: "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium",
-			dataType: 'json',
-			method: 'get',
-			cache: true,
-				success: function(data){
-				console.log(data.results[0]);
-				// var location = (data.current_observation.observation_location.city)
-				// var temp = (data.current_observation.temp_f);
-		   	}
-		});	
-
-	}); //ready
+	$.ajax({
+		url: "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium",
+		dataType: 'json',
+		method: 'get',
+		cache: true,
+			success: function(data){
+			let question =  data.results[0].question;
+			console.log(question);
+	   	}
+	});	
+}); //ready
 
 // ************
 
