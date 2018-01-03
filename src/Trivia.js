@@ -32,13 +32,11 @@ class Trivia extends Component {
       		allTrivia: []
     	}
 
-    	this.newTrivia = this.newTrivia.bind(this);
+    	this.newQuestion = this.newQuestion.bind(this);
 
 	}; //constructor
 
-	newTrivia(e) {
-
-		let questions = this.state.allTrivia;
+	newQuestion(e) {
 	
 		fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
 		  .then(
@@ -51,21 +49,20 @@ class Trivia extends Component {
 
 		      // Examine the text in the response
 		      response.json().then(function(data) {
-		        console.log(data);
+		        console.log(data.results[0].question);
 		      });
 		    }
 		  )
 		  .catch(function(err) {
 		    console.log('Fetch Error :-S', err);
 		  });
-		  console.log(questions);
 
 	}; //newTrivia
 		  
 	render() {
 		return (
 		<div className="button-container">
-		    <button type="submit" onClick={ this.newTrivia }>Hit Me</button>
+		    <button type="submit" onClick={ this.newQuestion }>Hit Me</button>
 		</div>
 		);
 	}; //render
