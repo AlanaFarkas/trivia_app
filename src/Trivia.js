@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import $ from 'jquery'; 
+// import $ from 'jquery'; 
 import './Trivia.css';
 
 // *************
+		// fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
+		//   .then(
+		//     function(response) {
+		//       if (response.status !== 200) {
+		//         console.log('Looks like there was a problem. Status Code: ' +
+		//           response.status);
+		//         return;
+		//       }
 
-
-
-	$.ajax({
-		url: "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium",
-		dataType: 'json',
-		method: 'get',
-		cache: true,
-			success: function(data){
-			let question =  data.results[0].question;
-			console.log(question);
-	   	}
-	});	
-
+		//       // Examine the text in the response
+		//       response.json().then(function(data) {
+		//         console.log(data);
+		//       });
+		//     }
+		//   )
+		//   .catch(function(err) {
+		//     console.log('Fetch Error :-S', err);
+		//   });
 // ************
 
 class Trivia extends Component {
@@ -34,12 +38,34 @@ class Trivia extends Component {
 
 	newTrivia(e) {
 
+		let questions = this.state.allTrivia;
+	
+		fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
+		  .then(
+		    function(response) {
+		      if (response.status !== 200) {
+		        console.log('Looks like there was a problem. Status Code: ' +
+		          response.status);
+		        return;
+		      }
+
+		      // Examine the text in the response
+		      response.json().then(function(data) {
+		        console.log(data);
+		      });
+		    }
+		  )
+		  .catch(function(err) {
+		    console.log('Fetch Error :-S', err);
+		  });
+		  console.log(questions);
+
 	}; //newTrivia
 		  
 	render() {
 		return (
 		<div className="button-container">
-		    <button onSubmit={ this.newTrivia }>Hit Me</button>
+		    <button type="submit" onClick={ this.newTrivia }>Hit Me</button>
 		</div>
 		);
 	}; //render
