@@ -55,10 +55,16 @@ class Question extends Component {
 	handleChange(e) {
 
 	}
+
 		  
 	render() {
+		const { questions } = this.state;
+
 		return (
 		<div className="button-container">
+	      <div>
+      	{questions}
+      </div>
 		    <button type="submit" onClick={ this.componentDidMount }>Hit Me</button>
 		</div>
 		);
