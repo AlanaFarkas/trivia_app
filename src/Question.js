@@ -23,7 +23,7 @@ import './Question.css';
 		//   });
 // ************
 
-class Trivia extends Component {
+class Question extends Component {
 
 	constructor(props, context) {
 		super (props, context);
@@ -73,9 +73,9 @@ class Trivia extends Component {
 	}; //render
 
 
-}; //Trivia
+}; //Question
 
-export default Trivia;
+export default Question;
 
 // "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium"
 
