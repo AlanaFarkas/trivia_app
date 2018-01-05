@@ -32,11 +32,11 @@ class Trivia extends Component {
       		allTrivia: []
     	}
 
-    	this.newQuestion = this.newQuestion.bind(this);
+    	this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
 	}; //constructor
 
-	newQuestion(e) {
+	handleFormSubmit(e) {
 	
 		fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
 		  .then(
@@ -62,7 +62,7 @@ class Trivia extends Component {
 	render() {
 		return (
 		<div className="button-container">
-		    <button type="submit" onClick={ this.newQuestion }>Hit Me</button>
+		    <button type="submit" onClick={ this.handleFormSubmit }>Hit Me</button>
 		</div>
 		);
 	}; //render
