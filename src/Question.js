@@ -39,12 +39,14 @@ class Question extends Component {
 
 	// handleFormSubmit(e) {
 	
-	componentDidMount() {
+	componentDidMount(e) {
+
     fetch("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
       .then(response => response.json())
       .then(data => this.setState({ questions: data.results[0].question }));
-      let theQuestion = this.state.questions
-      console.log(theQuestion);
+      
+      // let theQuestion = this.state.questions
+      // console.log(theQuestion);
       // console.log(this.state.questions);
 
   		}
