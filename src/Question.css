@@ -1,9 +1,9 @@
-#trivia {
+#question {
 	border: 1px red solid;
 	padding: 10%;
 }
 
-#trivia button {
+#question button {
 	margin: auto;
 	display: block;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import $ from 'jquery'; 
-import './Trivia.css';
+import './Question.css';
 
 // *************
 		// fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
@@ -29,10 +29,11 @@ class Trivia extends Component {
 		super (props, context);
 		
 		this.state = {
-      		allTrivia: []
+      		questions: []
     	}
 
     	this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    	this.handleChange = this.handleChange.bind(this);
 
 	}; //constructor
 
@@ -57,7 +58,11 @@ class Trivia extends Component {
 		    console.log('Fetch Error :-S', err);
 		  });
 
-	}; //newTrivia
+	}; //handleFormSumbit
+
+	handleChange(e) {
+
+	}
 		  
 	render() {
 		return (
