@@ -32,33 +32,25 @@ class Question extends Component {
       		questions: []
     	}
 
-    	this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    	this.componentDidMount = this.componentDidMount.bind(this);
     	this.handleChange = this.handleChange.bind(this);
 
 	}; //constructor
 
-	handleFormSubmit(e) {
+	// handleFormSubmit(e) {
 	
-		fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
-		  .then(
-		    function(response) {
-		      if (response.status !== 200) {
-		        console.log('Looks like there was a problem. Status Code: ' +
-		          response.status);
-		        return;
-		      }
+	componentDidMount() {
+    fetch("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
+      .then(response => response.json())
+      .then(data => this.setState({ questions: data.results[0].question }));
+      let theQuestion = this.state.questions
+      console.log(theQuestion);
+      // console.log(this.state.questions);
 
-		      // Examine the text in the response
-		      response.json().then(function(data) {
-		        console.log(data.results[0].question);
-		      });
-		    }
-		  )
-		  .catch(function(err) {
-		    console.log('Fetch Error :-S', err);
-		  });
+  		}
+// 
 
-	}; //handleFormSumbit
+	// }; //handleFormSumbit
 
 	handleChange(e) {
 
@@ -67,7 +59,7 @@ class Question extends Component {
 	render() {
 		return (
 		<div className="button-container">
-		    <button type="submit" onClick={ this.handleFormSubmit }>Hit Me</button>
+		    <button type="submit" onClick={ this.componentDidMount }>Hit Me</button>
 		</div>
 		);
 	}; //render
