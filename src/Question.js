@@ -29,7 +29,8 @@ class Question extends Component {
 		super (props, context);
 		
 		this.state = {
-      		questions: []
+      		questions: [],
+      		name: "Alana"
     	}
 
     	this.componentDidMount = this.componentDidMount.bind(this);
@@ -40,15 +41,14 @@ class Question extends Component {
 	// handleFormSubmit(e) {
 	
 	componentDidMount(e) {
-
     fetch("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
       .then(response => response.json())
       .then(data => this.setState({ questions: data.results[0].question }));
+    	console.log(this.state);
       
       // let theQuestion = this.state.questions
       // console.log(theQuestion);
       // console.log(this.state.questions);
-
   		}
 // 
 
@@ -65,9 +65,9 @@ class Question extends Component {
 		return (
 		<div className="button-container">
 	      <div>
-      	{questions}
       </div>
 		    <button type="submit" onClick={ this.componentDidMount }>Hit Me</button>
+      		{questions}
 		</div>
 		);
 	}; //render
