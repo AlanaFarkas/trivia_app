@@ -60,7 +60,7 @@ class Question extends Component {
 		const { questions } = this.state;
 
 		return (
-		<div className="button-container">
+		<div className="container">
       		<div className="question-container">
       			{questions}
       		</div>
