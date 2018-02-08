@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 // import $ from 'jquery'; 
 import './Question.css';
 var axios = require('axios');
-var file = require('file-system');
-var fs = require('fs');
+// var file = require('file-system');
+// var fs = require('fs');
  
-file.readFile === fs.readFile // true 
+//file.readFile === fs.readFile // true 
 
 // *************
 		// fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
@@ -50,40 +50,11 @@ class Question extends Component {
 		  .then( (response) => {
 		  	var fullQuestion = response.data.results[0].question;
 		  	this.setState({questions: fullQuestion}); 
-
-
-		    // console.log(response.data.results[0].question);
-
-
 		  })
 		  .catch(function (error) {
 		    console.log(error);
-		});
-					
-	}
-
-
-	// handleFormSubmit(e) {
-	
-	// componentWillMount(e) {
- //    fetch("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
- //    	// console.log(response => response.json());
- //      .then( response => response.json() )
- //      .then( data => this.setState({ questions: data.results[0].question }) );
- //    	console.log(this.state);
-      
-      // let theQuestion = this.state.questions
-      // console.log(theQuestion);
-      // console.log(this.state.questions);
-  		// }
-// 
-
-	// }; //handleFormSumbit
-
-	handleChange(e) {
-
-	}
-
+		});					
+	} 
 		  
 	render() {
 		const { questions } = this.state;
