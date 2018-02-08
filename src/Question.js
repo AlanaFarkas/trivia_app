@@ -61,10 +61,10 @@ class Question extends Component {
 
 		return (
 		<div className="button-container">
-		    <button type="submit" onClick={ this.getQuestions }>Hit Me</button>
       		<div className="question-container">
       			{questions}
       		</div>
+		    <button type="submit" onClick={ this.getQuestions }>Hit Me</button>
 		</div>
 		);
 	}; //render
