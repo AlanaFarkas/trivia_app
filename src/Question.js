@@ -48,7 +48,8 @@ class Question extends Component {
 		    }
 		  })
 		  .then(function (response) {
-		    console.log(response['data']['results'][0]);
+		    var question = response['data']['results'][0]['question'];
+		    console.log(question);
 
 		  })
 		  .catch(function (error) {
