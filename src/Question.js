@@ -47,9 +47,13 @@ class Question extends Component {
 		      difficulty: 'medium'
 		    }
 		  })
-		  .then(function (response) {
-		    var question = response['data']['results'][0]['question'];
-		    console.log(question);
+		  .then( (response) => {
+		  	var fullQuestion = response.data.results[0].question;
+		  	this.setState({questions: fullQuestion}); 
+
+
+		    // console.log(response.data.results[0].question);
+
 
 		  })
 		  .catch(function (error) {
@@ -57,6 +61,7 @@ class Question extends Component {
 		});
 					
 	}
+
 
 	// handleFormSubmit(e) {
 	
