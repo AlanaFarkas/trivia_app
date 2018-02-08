@@ -31,34 +31,28 @@ file.readFile === fs.readFile // true
 class Question extends Component {
 
 	constructor(props, context) {
-		super (props, context);
-		
+		super (props, context);		
 		this.state = {
       		questions: []
     	}
-
     	this.getQuestions = this.getQuestions.bind(this);
-
-    	// this.componentWillMount = this.componentWillMount.bind(this);
-    	// this.handleChange = this.handleChange.bind(this);
-
 	}; //constructor
 
 	getQuestions(){
 
-			axios.get('https://opentdb.com/api.php?', {
-			    params: {
-			      amount: 1,
-			      category: 9,
-			      difficulty: 'medium'
-			    }
-			  })
-			  .then(function (response) {
-			    console.log(response);
-			  })
-			  .catch(function (error) {
-			    console.log(error);
-			});
+		axios.get('https://opentdb.com/api.php', {
+		    params: {
+		      amount: 1,
+		      category: 9,
+		      difficulty: 'medium'
+		    }
+		  })
+		  .then(function (response) {
+		    console.log(response);
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		});
 					
 	}
 
