@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 // import $ from 'jquery'; 
 import './Question.css';
+var axios = require('axios');
+var file = require('file-system');
+var fs = require('fs');
+ 
+file.readFile === fs.readFile // true 
 
 // *************
 		// fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
@@ -32,24 +37,40 @@ class Question extends Component {
       		questions: []
     	}
 
-    	this.componentWillMount = this.componentWillMount.bind(this);
-    	this.handleChange = this.handleChange.bind(this);
+    	this.getQuestions = this.getQuestions.bind(this);
+
+    	// this.componentWillMount = this.componentWillMount.bind(this);
+    	// this.handleChange = this.handleChange.bind(this);
 
 	}; //constructor
 
+	getQuestions(){
+
+		console.log("hitting");
+
+			axios.get("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
+			  .then(function (response) {
+			    console.log(response);
+			  })
+			  .catch(function (error) {
+			    console.log(error);
+			  });
+		
+	}
+
 	// handleFormSubmit(e) {
 	
-	componentWillMount(e) {
-    fetch("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
-    	// console.log(response => response.json());
-      .then( response => response.json() )
-      .then( data => this.setState({ questions: data.results[0].question }) );
-    	console.log(this.state);
+	// componentWillMount(e) {
+ //    fetch("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
+ //    	// console.log(response => response.json());
+ //      .then( response => response.json() )
+ //      .then( data => this.setState({ questions: data.results[0].question }) );
+ //    	console.log(this.state);
       
       // let theQuestion = this.state.questions
       // console.log(theQuestion);
       // console.log(this.state.questions);
-  		}
+  		// }
 // 
 
 	// }; //handleFormSumbit
@@ -64,7 +85,7 @@ class Question extends Component {
 
 		return (
 		<div className="button-container">
-		    <button type="submit" onClick={ this.componentWillMount }>Hit Me</button>
+		    <button type="submit" onClick={ this.getQuestions }>Hit Me</button>
       		<div className="question-container">
       			{questions}
       		</div>
