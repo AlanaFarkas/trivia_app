@@ -46,16 +46,20 @@ class Question extends Component {
 
 	getQuestions(){
 
-		console.log("hitting");
-
-			axios.get("https://opentdb.com/api.php?amount=1&category=9&difficulty=medium")
+			axios.get('https://opentdb.com/api.php?', {
+			    params: {
+			      amount: 1,
+			      category: 9,
+			      difficulty: 'medium'
+			    }
+			  })
 			  .then(function (response) {
 			    console.log(response);
 			  })
 			  .catch(function (error) {
 			    console.log(error);
-			  });
-		
+			});
+					
 	}
 
 	// handleFormSubmit(e) {
