@@ -15,7 +15,7 @@
     "unescape": "^1.0.1"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/scss -o src/",
+    "build-css": "node-sass-chokidar src/styles/css -o src/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
