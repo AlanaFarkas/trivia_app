@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import $ from 'jquery'; 
-import './Question.css';
+import './styles/css/question.css';
 var axios = require('axios');
 var decode = require('unescape');
  
