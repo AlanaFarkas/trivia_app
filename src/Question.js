@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import $ from 'jquery'; 
 import './Question.css';
 var axios = require('axios');
+var decode = require('unescape');
+ 
 // var file = require('file-system');
 // var fs = require('fs');
  
@@ -48,7 +50,7 @@ class Question extends Component {
 		    }
 		  })
 		  .then( (response) => {
-		  	var fullQuestion = response.data.results[0].question;
+		  	var fullQuestion = decode(response.data.results[0].question);
 		  	this.setState({questions: fullQuestion}); 
 		  })
 		  .catch(function (error) {
