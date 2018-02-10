@@ -1,10 +1,11 @@
+@import "_variables";
+
 #container {
 	padding: 10%;
-	background-color: red;
+	background-color: $purple;
 	button {
 		margin: auto;
 		display: block;
-		/*background-color: $purple;*/
 	}
 	p {text-align: center}
 }

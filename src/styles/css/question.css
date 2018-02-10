@@ -1,9 +1,8 @@
 #container {
   padding: 10%;
-  background-color: red; }
+  background-color: purple; }
   #container button {
     margin: auto;
-    display: block;
-    /*background-color: $purple;*/ }
+    display: block; }
   #container p {
     text-align: center; }

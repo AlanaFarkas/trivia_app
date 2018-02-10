@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-// import $ from 'jquery'; 
+import { Button } from 'react-materialize'
 import './styles/css/question.css';
 var axios = require('axios');
 var decode = require('unescape');
+
+
+// export default () => (
+// 	<Button waves='light'>
+// 		<Icon>thumb_up</Icon>
+// 	</Button>
+// )
  
 // var file = require('file-system');
 // var fs = require('fs');
@@ -55,7 +62,7 @@ class Question extends Component {
 		  })
 		  .catch(function (error) {
 		    console.log(error);
-		});					
+		});				
 	} 
 		  
 	render() {
@@ -66,7 +73,7 @@ class Question extends Component {
       		<div className="question-container">
       			<p>{questions}</p>
       		</div>
-		    <button type="submit" onClick={ this.getQuestions }>Hit Me</button>
+		    <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button>
 		</div>
 		);
 	}; //render
