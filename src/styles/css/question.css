@@ -5,3 +5,5 @@
     margin: auto;
     display: block;
     /*background-color: $purple;*/ }
+  #container p {
+    text-align: center; }
