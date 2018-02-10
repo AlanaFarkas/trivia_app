@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'react-materialize'
+import { Row } from 'react-materialize'
+import { Col } from 'react-materialize'
+
+
 import './styles/css/question.css';
 var axios = require('axios');
 var decode = require('unescape');
@@ -71,7 +75,11 @@ class Question extends Component {
 		return (
 		<div className="container">
       		<div className="question-container">
-      			<p>{questions}</p>
+      		<Row>      			
+      			<Col s={6} className='grid-example'>
+      				<p>{questions}</p>
+      			</Col>
+      		</Row>
       		</div>
 		    <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button>
 		</div>
