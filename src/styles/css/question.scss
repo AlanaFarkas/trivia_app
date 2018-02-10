@@ -1,9 +1,10 @@
-#question {
+#container {
 	padding: 10%;
+	background-color: red;
+	button {
+		margin: auto;
+		display: block;
+		/*background-color: $purple;*/
+	}
 }
 
-#question button {
-	margin: auto;
-	display: block;
-	background-color: $purple;
-}
