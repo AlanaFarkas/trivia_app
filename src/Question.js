@@ -20,26 +20,6 @@ var decode = require('unescape');
  
 //file.readFile === fs.readFile // true 
 
-// *************
-		// fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium')
-		//   .then(
-		//     function(response) {
-		//       if (response.status !== 200) {
-		//         console.log('Looks like there was a problem. Status Code: ' +
-		//           response.status);
-		//         return;
-		//       }
-
-		//       // Examine the text in the response
-		//       response.json().then(function(data) {
-		//         console.log(data);
-		//       });
-		//     }
-		//   )
-		//   .catch(function(err) {
-		//     console.log('Fetch Error :-S', err);
-		//   });
-// ************
 
 class Question extends Component {
 
@@ -67,7 +47,7 @@ class Question extends Component {
 		  .catch(function (error) {
 		    console.log(error);
 		});				
-	} 
+	} //getQuestions
 		  
 	render() {
 		const { questions } = this.state;
@@ -86,12 +66,10 @@ class Question extends Component {
 		);
 	}; //render
 
-
 }; //Question
 
 export default Question;
 
-// "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium"
 
 
 
