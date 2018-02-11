@@ -4,3 +4,8 @@ To Render:
 "Hit Me" button
 Trivia results
 
+v2: Gameify 
+
+Display question
+Display possible answers 
+Record and display score
