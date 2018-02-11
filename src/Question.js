@@ -55,14 +55,16 @@ class Question extends Component {
 
 		axios.get('https://opentdb.com/api.php', {
 		    params: {
-		      amount: 1,
+		      amount: 50,
 		      category: 9,
 		      difficulty: 'medium'
 		    }
 		  })
 		  .then( (response) => {
-		  	var fullQuestion = decode(response.data.results[0].question);
-		  	this.setState({questions: fullQuestion}); 
+		  	var questionObj = response.data.results;
+		  	this.state.questions.push(questionObj);
+		  	console.log(this.state.questions);
+
 		  })
 		  .catch(function (error) {
 		    console.log(error);
@@ -85,7 +87,6 @@ class Question extends Component {
 		</div>
 		);
 	}; //render
-
 
 }; //Question
 
