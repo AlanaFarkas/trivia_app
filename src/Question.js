@@ -2,18 +2,9 @@ import React, { Component } from 'react';
 import { Button } from 'react-materialize'
 import { Row } from 'react-materialize'
 import { Col } from 'react-materialize'
-
-
 import './styles/css/question.css';
 var axios = require('axios');
 var decode = require('unescape');
-
-
-// export default () => (
-// 	<Button waves='light'>
-// 		<Icon>thumb_up</Icon>
-// 	</Button>
-// )
  
 // var file = require('file-system');
 // var fs = require('fs');
