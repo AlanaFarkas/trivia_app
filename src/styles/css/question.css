@@ -1,0 +1,9 @@
+#container {
+  padding: 10%;
+  background-color: purple; }
+  #container button {
+    margin: auto;
+    display: block;
+    background-color: red; }
+  #container p {
+    text-align: center; }
