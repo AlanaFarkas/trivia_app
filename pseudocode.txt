@@ -4,3 +4,9 @@ To Render:
 "Hit Me" button
 Trivia results
 
+v2: Gameify
+Components to make:
+Button
+Question block
+Answer block
+Score block

@@ -12,7 +12,7 @@ var decode = require('unescape');
 //file.readFile === fs.readFile // true 
 
 
-class Question extends Component {
+export default class Question extends Component {
 
 	constructor(props, context) {
 		super (props, context);		
@@ -47,7 +47,7 @@ class Question extends Component {
 		<div className="container">
       		<div className="question-container">
       		<Row>      			
-      			<Col s={6} className='grid-example'>
+      			<Col s={12} className='grid-example'>
       				<p>{questions}</p>
       			</Col>
       		</Row>
@@ -59,7 +59,7 @@ class Question extends Component {
 
 }; //Question
 
-export default Question;
+ // Question;
 
 
 
