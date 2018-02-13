@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button } from 'react-materialize'
+// import { Button } from 'react-materialize'
 import { Row } from 'react-materialize'
 import { Col } from 'react-materialize'
+import HitMeButton from './button'
 import './styles/css/question.css';
 var axios = require('axios');
 var decode = require('unescape');
@@ -52,7 +53,8 @@ export default class Question extends Component {
       			</Col>
       		</Row>
       		</div>
-		    <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button>
+		   
+		    <HitMeButton />
 		</div>
 		);
 	}; //render
