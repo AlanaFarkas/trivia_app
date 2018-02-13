@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/css/index.css';
 // import App from './App';
-import Question from './Question';
+import Question from './question';
 import registerServiceWorker from './registerServiceWorker';
 
 
