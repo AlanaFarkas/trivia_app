@@ -43,7 +43,6 @@ export default class Question extends Component {
 		  
 	render() {
 		const { questions } = this.state;
-
 		return (
 		<div className="container">
       		<div className="question-container">
