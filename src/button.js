@@ -6,10 +6,8 @@ import { Button } from 'react-materialize';
 export default class HitMeButton extends Component {
 	render() {
 	return(
-		<div className="Test">
-		{/* <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button> */}
+		// <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button>
 		<Button type="submit">Hit Me</Button>
-		</div>
 
 		);
 	}

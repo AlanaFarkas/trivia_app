@@ -52,7 +52,7 @@ export default class Question extends Component {
       			</Col>
       		</Row>
       		</div>
-		   
+		   {/* <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button> */}
 		    <HitMeButton />
 		</div>
 		);
