@@ -20,7 +20,7 @@ export default class Question extends Component {
 		this.state = {
       		questions: []
     	}
-    	this.getQuestions = this.getQuestions.bind(this);
+    		this.getQuestions = this.getQuestions.bind(this);
 	}; //constructor
 
 	getQuestions(){
@@ -34,6 +34,7 @@ export default class Question extends Component {
 		  })
 		  .then( (response) => {
 		  	var fullQuestion = decode(response.data.results[0].question);
+		  	console.log('whatup');
 		  	this.setState({questions: fullQuestion}); 
 		  })
 		  .catch(function (error) {
