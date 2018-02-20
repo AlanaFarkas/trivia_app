@@ -28,7 +28,7 @@ export default class Question extends Component {
 
 	handleClick(i) {
 	    const questions = this.state.questions.slice();
-	    squares[i] = this.state.xIsNext ? 'X' : 'O';
+	    questions[i] = this.state.xIsNext ? 'X' : 'O';
 	    this.setState({
 
 	    });
