@@ -12,16 +12,27 @@ var decode = require('unescape');
  
 //file.readFile === fs.readFile // true 
 
+// PUSH QUESTION OBJECTS INTO STATE.QUESTIONS
+
 
 export default class Question extends Component {
 
 	constructor(props, context) {
 		super (props, context);		
 		this.state = {
-      		questions: []
+      		questions: [],
+      		score: 0
     	}
     		this.getQuestions = this.getQuestions.bind(this);
 	}; //constructor
+
+	handleClick(i) {
+	    const questions = this.state.questions.slice();
+	    squares[i] = this.state.xIsNext ? 'X' : 'O';
+	    this.setState({
+
+	    });
+  	}
 
 	getQuestions(){
 
