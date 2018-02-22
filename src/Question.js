@@ -21,14 +21,16 @@ export default class Question extends Component {
 		super (props, context);		
 		this.state = {
       		questions: [],
-      		score: 0
+      		score: 0,
+      		newGame: false
     	}
-    		this.getQuestions = this.getQuestions.bind(this);
+    		// this.getQuestions = this.getQuestions.bind(this);
 	}; //constructor
 
 	handleClick(i) {
 	    const questions = this.state.questions.slice();
-	    questions[i] = this.state.xIsNext ? 'X' : 'O';
+	    questions[i] = this.state.questions.push();
+	    console.log(questions);
 	    this.setState({
 
 	    });
