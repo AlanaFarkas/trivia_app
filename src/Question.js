@@ -27,14 +27,6 @@ export default class Question extends Component {
     		// this.getQuestions = this.getQuestions.bind(this);
 	}; //constructor
 
-	// handleClick(i) {
-	//     const questions = this.state.questions.slice();
-	//     questions[i] = this.state.questions.push();
-	//     console.log(questions);
-	//     this.setState({
-
-	//     });
- //  	}
 
 	handleClick(i){
 
