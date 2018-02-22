@@ -38,7 +38,13 @@ export default class Question extends Component {
 		  })
 		  .then( (response) => {
 		  	console.log(response);
-		  	const questionObject = response.date.results;
+		  	for (var i of response.data.results) {
+			  this.state.questions.push(i);
+			}
+		  	// this.setState({questions: response.data.results});
+
+		  	console.log(this.state);
+		  	// console.log(questionObject);
 		  	// var fullQuestion = decode(response.data.results[0].question);
 		  	// console.log('whatup');
 		  	// this.setState({questions: fullQuestion}); 
@@ -49,7 +55,7 @@ export default class Question extends Component {
 	} //getQuestions
 		  
 	render() {
-		const { questions } = this.state.questions;
+		const { questions } = this.state;
 		return (
 		<div className="container">
       		<div className="question-container">
