@@ -31,13 +31,14 @@ export default class Question extends Component {
 
 		axios.get('https://opentdb.com/api.php', {
 		    params: {
-		      amount: 1,
+		      amount: 50,
 		      category: 9,
 		      difficulty: 'medium'
 		    }
 		  })
 		  .then( (response) => {
 		  	console.log(response);
+		  	const questionObject = response.date.results;
 		  	// var fullQuestion = decode(response.data.results[0].question);
 		  	// console.log('whatup');
 		  	// this.setState({questions: fullQuestion}); 
