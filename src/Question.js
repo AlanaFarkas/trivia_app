@@ -24,7 +24,6 @@ export default class Question extends Component {
       		score: 0,
       		newGame: false
     	}
-    		// this.getQuestions = this.getQuestions.bind(this);
 	}; //constructor
 
 
