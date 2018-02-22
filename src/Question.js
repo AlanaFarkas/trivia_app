@@ -27,16 +27,16 @@ export default class Question extends Component {
     		// this.getQuestions = this.getQuestions.bind(this);
 	}; //constructor
 
-	handleClick(i) {
-	    const questions = this.state.questions.slice();
-	    questions[i] = this.state.questions.push();
-	    console.log(questions);
-	    this.setState({
+	// handleClick(i) {
+	//     const questions = this.state.questions.slice();
+	//     questions[i] = this.state.questions.push();
+	//     console.log(questions);
+	//     this.setState({
 
-	    });
-  	}
+	//     });
+ //  	}
 
-	getQuestions(){
+	handleClick(i){
 
 		axios.get('https://opentdb.com/api.php', {
 		    params: {
@@ -46,9 +46,10 @@ export default class Question extends Component {
 		    }
 		  })
 		  .then( (response) => {
-		  	var fullQuestion = decode(response.data.results[0].question);
-		  	console.log('whatup');
-		  	this.setState({questions: fullQuestion}); 
+		  	console.log(response);
+		  	// var fullQuestion = decode(response.data.results[0].question);
+		  	// console.log('whatup');
+		  	// this.setState({questions: fullQuestion}); 
 		  })
 		  .catch(function (error) {
 		    console.log(error);
@@ -56,7 +57,7 @@ export default class Question extends Component {
 	} //getQuestions
 		  
 	render() {
-		const { questions } = this.state;
+		const { questions } = this.state.questions;
 		return (
 		<div className="container">
       		<div className="question-container">
@@ -67,7 +68,9 @@ export default class Question extends Component {
       		</Row>
       		</div>
 		   {/* <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button> */}
-		    <HitMeButton />
+		    <HitMeButton 
+		    onClick={() => this.handleClick()} 
+		    />
 		</div>
 		);
 	}; //render

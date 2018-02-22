@@ -7,10 +7,7 @@ import Question from './question';
 export default class HitMeButton extends Component {
 	render() {
 	return(
-		// <Button type="submit" onClick={ this.getQuestions }>Hit Me</Button>
 		<Button type="submit" onClick={ this.props.onClick }>Hit Me</Button>
-
-
 		);
 	}
 }
