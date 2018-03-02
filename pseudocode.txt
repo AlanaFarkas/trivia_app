@@ -18,4 +18,4 @@ render possible answers including correct answer
 if user selects correct answer, assign score: value to be +1  
 render score {state.score}/{state.questions.length}
 
-On load should I just fill my state.question array with the questions and then do the rendering/logic?
+On load should I just fill my state.question array with the questions and then do the rendering/logic with the button click?

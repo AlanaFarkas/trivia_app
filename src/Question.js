@@ -24,18 +24,14 @@ export default class Question extends Component {
       		score: 0,
       		newGame: false
     	}
-	}; //constructor
 
-
-	handleClick(i){
-
-		axios.get('https://opentdb.com/api.php', {
-		    params: {
-		      amount: 50,
-		      category: 9,
-		      difficulty: 'medium'
-		    }
-		  })
+	    	axios.get('https://opentdb.com/api.php', {
+			    params: {
+			      amount: 50,
+			      category: 9,
+			      difficulty: 'medium'
+			    }
+			})
 		  .then( (response) => {
 		  	console.log(response);
 		  	for (var i of response.data.results) {
@@ -51,7 +47,62 @@ export default class Question extends Component {
 		  })
 		  .catch(function (error) {
 		    console.log(error);
-		});				
+		});	
+	}; //constructor
+
+	// handleClick(i) {
+		// axios.get('https://opentdb.com/api.php', {
+		//     params: {
+		//       amount: 50,
+		//       category: 9,
+		//       difficulty: 'medium'
+		//     }
+		//   })
+		//   .then( (response) => {
+		//   	console.log(response);
+		//   	for (var i of response.data.results) {
+		// 	  this.state.questions.push(i);
+		// 	}
+		//   	// this.setState({questions: response.data.results});
+
+		//   	console.log(this.state);
+		//   	// console.log(questionObject);
+		//   	// var fullQuestion = decode(response.data.results[0].question);
+		//   	// console.log('whatup');
+		//   	// this.setState({questions: fullQuestion}); 
+		//   })
+		//   .catch(function (error) {
+		//     console.log(error);
+		// });				
+	// }
+
+	handleClick(i){
+		// return callQuestion()
+		console.log(this.state.questions)
+
+		// axios.get('https://opentdb.com/api.php', {
+		//     params: {
+		//       amount: 50,
+		//       category: 9,
+		//       difficulty: 'medium'
+		//     }
+		//   })
+		//   .then( (response) => {
+		//   	console.log(response);
+		//   	for (var i of response.data.results) {
+		// 	  this.state.questions.push(i);
+		// 	}
+		//   	// this.setState({questions: response.data.results});
+
+		//   	console.log(this.state);
+		//   	// console.log(questionObject);
+		//   	// var fullQuestion = decode(response.data.results[0].question);
+		//   	// console.log('whatup');
+		//   	// this.setState({questions: fullQuestion}); 
+		//   })
+		//   .catch(function (error) {
+		//     console.log(error);
+		// });				
 	} //getQuestions
 		  
 	render() {
